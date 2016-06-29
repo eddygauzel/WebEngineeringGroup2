@@ -53,10 +53,15 @@ class MessagesController < ApplicationController
 
 #---------------------------------------------
   def getMessage
-    #authentifizieren
 
+    #authentifizieren
     begin
-      sha_ds = pb.public_decrypt(params[:sig_service])
+      if params[:sig_service].nil?
+        head 404
+      else
+        sha_ds = pb.public_decrypt(params[:sig_service])
+      end
+
 
 
       # sha Hash Wert (sha-256 über Identität und TS)
@@ -78,10 +83,10 @@ class MessagesController < ApplicationController
         if (timnow-timeMessage)<=300
           mess = messages.find_by(recipient: params[:login])
           if mess.nil?
+            head 506
+          else
             render json: mess.to_json(only: %w(sender cipher iv key_recipient_enc sig_recipient ))
 
-          else
-            head 506
           end
 
 
