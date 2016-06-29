@@ -5,12 +5,12 @@ class MessagesController < ApplicationController
     pubkey = User.find_by(loginName: params[:recipient]).pubkey_user
 
     pb = OpenSSL::PKey::RSA.new(pubkey)
-    logger.info(pb)
+
     begin
       sha_ds = pb.public_decrypt(params[:sig_service])
-      logger.info(pb)
 
-      # sha Hash wert sha-256 über IU TS und Empf.
+
+      # sha Hash Wert (sha-256 über IU, TS, und Empf.)
       sha256 = Digest::SHA256.new
       #IU
       sha256.update params[:recipient]
@@ -24,7 +24,6 @@ class MessagesController < ApplicationController
       #empf
       sha256.update params[:login]
       puts sha256.hexdigest
-      logger.info(sha256)
 
       if sha256 != sha_ds
         head 404
@@ -50,48 +49,47 @@ class MessagesController < ApplicationController
     rescue
       head 404
     end
-
-
-
-
-
-
   end
 
-
+#---------------------------------------------
   def getMessage
+    #authentifizieren
 
-    ds = params[:sig_service]
-    pubkey = User.find_by(loginName: params[:login]).pubkey_user
-
-
-    pb = OpenSSL::PKey::RSA.new(pubkey)
     begin
-      pb.public_decrypt(params[:sig_service])
+      sha_ds = pb.public_decrypt(params[:sig_service])
 
 
+      # sha Hash Wert (sha-256 über Identität und TS)
+      sha256 = Digest::SHA256.new
+      #Identität
+      ha256.update params[:login]
+      #TS
+      sha256.update params[:timestamp]
 
-    rescue
-      head 404
-    end
+      puts sha256.hexdigest
 
 
-    timenow = Time.zone.now()
-    timeMessage =params[:timestamp]
-
-    if (timnow-timeMessage)<=300
-
-      messages = Message.find_by(recipient: params[:login])
-      if messages.nil?
-        head 506
+      if sha256 != sha_ds
+        head 404
       else
+      #Zeitstempel Prüfen
+      timenow = Time.zone.now()
+      timeMessage =params[:timestamp]
+        if (timnow-timeMessage)<=300
+          mess = messages.find_by(recipient: params[:login])
+          if mess.nil?
+            render json: mess.to_json(only: %w(sender cipher iv key_recipient_enc sig_recipient ))
 
-      render json: messages.to_json(only: %w(sender cipher iv key_recipient_enc sig_recipient ))
-    end
-    else
-      head 406
-    end
+          else
+            head 506
+          end
 
 
+        else
+        head 406
+        end
+
+      end
+     end
   end
 end
