@@ -69,9 +69,6 @@ class UsersController < ApplicationController
 
       sha_ds = pb.public_decrypt(params[:sig_service])
 
-
-
-
       # sha Hash Wert (sha-256 über Identität und TS)
       sha256 = Digest::SHA256.new
       #Identität

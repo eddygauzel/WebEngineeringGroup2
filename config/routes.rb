@@ -5,8 +5,8 @@ Rails.application.routes.draw do
       get '/' => 'users#anmelden'
       post '/' => 'users#create'
       scope '/message' do
-        post '/' => 'message#send'
-        get '/' => 'users#getmessage'
+        get '/' => 'users#getMessage'
+        post '/' => 'messages#send'
       end
       scope '/pubkey' do
         get '/' => 'users#pubkey'
