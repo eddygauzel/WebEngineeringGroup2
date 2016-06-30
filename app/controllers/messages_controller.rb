@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-  def getMessage
+  def getMessage(n)
 
     #authentifizieren
     begin
@@ -44,7 +44,7 @@ class MessagesController < ApplicationController
   end
 
 
-  def send
+  def send(n)
     pubkey = User.find_by(loginName: params[:recipient]).pubkey_user
     if(pubkey.nil?)
       head 406
@@ -67,7 +67,7 @@ class MessagesController < ApplicationController
       #TS
       sha256.update params[:timestamp]
       #empf
-      sha256.update params[name]
+      sha256.update params[:login]
       puts sha256.hexdigest
 
       if sha256 != sha_ds

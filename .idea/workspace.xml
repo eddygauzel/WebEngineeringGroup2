@@ -35,7 +35,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="582">
               <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
               <folding />
             </state>
@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="messages_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="44" column="0" selection-start-line="2" selection-start-column="2" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -65,8 +65,8 @@
       <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -85,8 +85,8 @@
       <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="34">
+              <caret line="2" column="75" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -98,18 +98,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response29.txt" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response57.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
@@ -214,6 +214,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weServerG2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weServerG2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -229,6 +247,234 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/eddy/message" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="recipient" />
+                <option name="value" value="eddy" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_service" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cipher" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="iv" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key_recipient_enc" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_recipient" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="timestamp" />
+                <option name="value" value="1989456323" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/eddy/message" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="recipient" />
+                <option name="value" value="eddy" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_service" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cipher" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="iv" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key_recipient_enc" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_recipient" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjhkadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="timestamp" />
+                <option name="value" value="1989456323" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/eddy/message" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="recipient" />
+                <option name="value" value="eddy" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_service" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cipher" />
+                <option name="value" value="lsjkhdkjjdjdjdjdjksjdksjd" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="iv" />
+                <option name="value" value="ksjdhkjh38kh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key_recipient_enc" />
+                <option name="value" value="i4378zwi47zi7zs4i7zsif4ziz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_recipient" />
+                <option name="value" value="8s7zis7zis7zfis7z" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="timestamp" />
+                <option name="value" value="i8hsdi8shid8shds" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/eddy/message" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="recipient" />
+                <option name="value" value="eddy" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_service" />
+                <option name="value" value="kadjhksdjhfksdjhfksdjh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cipher" />
+                <option name="value" value="lsjkhdkjjdjdjdjdjksjdksjd" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="iv" />
+                <option name="value" value="ksjdhkjh38kh" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="key_recipient_enc" />
+                <option name="value" value="i4378zwi47zi7zs4i7zsif4ziz" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sig_recipient" />
+                <option name="value" value="8s7zis7zis7zfis7z" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="timestamp" />
+                <option name="value" value="i8hsdi8shid8shds" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/eddy/message" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:3000" />
@@ -784,7 +1030,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: weServerG2">
+  <component name="RunManager" selected="Rails.Production: weServerG2">
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -966,22 +1212,22 @@
       <workItem from="1467191234515" duration="1401000" />
       <workItem from="1467192674688" duration="3944000" />
       <workItem from="1467219355526" duration="12692000" />
-      <workItem from="1467307616038" duration="1217000" />
+      <workItem from="1467307616038" duration="3208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44073000" />
+    <option name="totallyTimeSpent" value="46064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13489583" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34086242" sideWeight="0.515625" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34086242" sideWeight="0.484375" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34086242" sideWeight="0.484375" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1013,13 +1259,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="132" selection-start-line="8" selection-start-column="132" selection-end-line="8" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1312,6 +1551,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="1655" column="10" selection-start-line="1655" selection-start-column="10" selection-end-line="1655" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1319,14 +1559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="1058" column="14" selection-start-line="1058" selection-start-column="14" selection-end-line="1058" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1367,10 +1599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/message.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1383,18 +1615,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="44" column="0" selection-start-line="2" selection-start-column="2" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1402,7 +1650,7 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           <folding />
         </state>
       </provider>
