@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
   #resources :messages
   #resources :users
-  scope '/:login' do
-    get '/' => 'users#anmelden'
-    post '/' => 'users#create'
-    delete '/' => 'user#delete'
-    scope '/message' do
-      get '/' => 'messages#send'
-      post '/' => 'messages#getMessage'
+    scope '/:login' do
+      get '/' => 'users#anmelden'
+      post '/' => 'users#create'
+      scope '/message' do
+        post '/' => 'message#send'
+        get '/' => 'users#getmessage'
+      end
+      scope '/pubkey' do
+        get '/' => 'users#pubkey'
+
+      end
     end
-    scope '/pubkey' do
-      get '/' => 'users#pubkey'
-    end
-  end
+end
+
+
 
 
 
@@ -75,4 +78,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
