@@ -5,11 +5,20 @@ Rails.application.routes.draw do
     get '/' => 'users#anmelden'
     post '/' => 'users#create'
     delete '/' => 'user#delete'
+    scope '/message' do
+      get '/' => 'messages#send'
+      post '/' => 'messages#getMessage'
+    end
+    scope '/pubkey' do
+      get '/' => 'users#pubkey'
+    end
   end
-  get '/:login/pubkey'  => 'users#pubkey'
 
-  post '/:login/message' => 'messages#send'
-  get '/:login/message' => 'messages#getMessage'
+
+
+
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
       #return  status 400
       head 400
     else
-      render json: @user.to_json(only: %w(salt_masterkey privkey_user_enc pubkey_user))
+      render json: @user.to_json(only: %w(salt_masterkey privatekey_user_enc pubkey_user))
 
     end
   end
@@ -61,6 +61,7 @@ class UsersController < ApplicationController
 
 
   end
+
 
 
 

@@ -1,9 +1,12 @@
 class MessagesController < ApplicationController
 
-  def send
+
+  def send(name)
 
     pubkey = User.find_by(loginName: params[:recipient]).pubkey_user
-
+    if(pubkey.nil?)
+      head 406
+    end
     pb = OpenSSL::PKey::RSA.new(pubkey)
 
     begin
@@ -52,15 +55,13 @@ class MessagesController < ApplicationController
   end
 
 #---------------------------------------------
-  def getMessage
+  def getMessage(name)
 
     #authentifizieren
     begin
-      if params[:sig_service].nil?
-        head 404
-      else
+
         sha_ds = pb.public_decrypt(params[:sig_service])
-      end
+
 
 
 
@@ -95,6 +96,8 @@ class MessagesController < ApplicationController
         end
 
       end
-     end
+    end
+  rescue
+    head 404
   end
 end
