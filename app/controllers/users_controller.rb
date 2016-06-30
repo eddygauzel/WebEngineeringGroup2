@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def anmelden
-    @user = User.find_by(loginName: params[:login])
-    if @user.nil?
+    user = User.find_by(loginName: params[:login])
+    if user.nil?
       #return  status 400
       head 400
     else
@@ -60,49 +60,6 @@ class UsersController < ApplicationController
     end
 
 
-  end
-
-  def getMessage
-
-    #authentifizieren
-    begin
-
-      sha_ds = pb.public_decrypt(params[:sig_service])
-
-      # sha Hash Wert (sha-256 über Identität und TS)
-      sha256 = Digest::SHA256.new
-      #Identität
-      ha256.update params[:login]
-      #TS
-      sha256.update params[:timestamp]
-
-      puts sha256.hexdigest
-
-
-      if sha256 != sha_ds
-        head 404
-      else
-        #Zeitstempel Prüfen
-        timenow = Time.zone.now()
-        timeMessage =params[:timestamp]
-        if (timnow-timeMessage)<=300
-          mess = messages.find_by(recipient: params[:login])
-          if mess.nil?
-            head 506
-          else
-            render json: mess.to_json(only: %w(sender cipher iv key_recipient_enc sig_recipient ))
-
-          end
-
-
-        else
-          head 406
-        end
-
-      end
-    end
-  rescue
-    head 404
   end
 
 

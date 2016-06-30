@@ -1,28 +1,23 @@
 class MessagesController < ApplicationController
 
-  def getMessage(n)
+  def getMessage
 
     #authentifizieren
     begin
-
       sha_ds = pb.public_decrypt(params[:sig_service])
-
       # sha Hash Wert (sha-256 über Identität und TS)
       sha256 = Digest::SHA256.new
       #Identität
       ha256.update params[:login]
       #TS
-      sha256.update params[:timestamp]
-
-      puts sha256.hexdigest
-
-
+      sha256.update params[:timestamp].to_i
+      puts sha256.hexdigestx
       if sha256 != sha_ds
         head 404
       else
         #Zeitstempel Prüfen
-        timenow = Time.zone.now()
-        timeMessage =params[:timestamp]
+        timenow = Time.zone.now().to_i
+        timeMessage =params[:timestamp].to_i
         if (timnow-timeMessage)<=300
           mess = messages.find_by(recipient: params[:login])
           if mess.nil?
@@ -38,20 +33,19 @@ class MessagesController < ApplicationController
         end
 
       end
+
+    rescue
+      head 404
     end
-  rescue
-    head 404
+
+
+
   end
 
-
   def send(n)
-    pubkey = User.find_by(loginName: params[:recipient]).pubkey_user
-    if(pubkey.nil?)
-      head 406
-    end
-    pb = OpenSSL::PKey::RSA.new(pubkey)
-
     begin
+      pubkey = User.find_by(loginName: params[:recipient]).pubkey_user
+      pb = OpenSSL::PKey::RSA.new(pubkey)
       sha_ds = pb.public_decrypt(params[:sig_service])
 
 
@@ -65,7 +59,7 @@ class MessagesController < ApplicationController
       sha256.update params[:sig_recipient]
 
       #TS
-      sha256.update params[:timestamp]
+      sha256.update params[:timestamp].to_i
       #empf
       sha256.update params[:login]
       puts sha256.hexdigest
@@ -73,8 +67,8 @@ class MessagesController < ApplicationController
       if sha256 != sha_ds
         head 404
       else
-        timenow = Time.zone.now()
-        timeMessage =params[:timestamp]
+        timenow = Time.zone.now().to_i
+        timeMessage =params[:timestamp].to_i
 
         if (timnow-timeMessage)<=300
           message = new Message(
@@ -96,5 +90,6 @@ class MessagesController < ApplicationController
     end
 
   end
+
 end
 
