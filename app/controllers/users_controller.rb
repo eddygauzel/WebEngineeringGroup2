@@ -12,9 +12,9 @@ class UsersController < ApplicationController
   end
 
   def create
-
+# erstellen
     if User.find_by(loginName: params[:login]).nil?
-      @user = User.new(loginName: params[:login] , salt_masterkey: params[:salt_masterkey], pubkey_user: params[:pubkey_user], privatekey_user_enc: params[:privatekey_user_enc_user_enc])
+      @user = User.new(loginName: params[:login] , salt_masterkey: params[:salt_masterkey], pubkey_user: params[:pubkey_user], privatekey_user_enc: params[:privatekey_user_enc])
       if @user.save
         #render json: @user.to_json
         head 200
