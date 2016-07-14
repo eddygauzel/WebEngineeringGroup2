@@ -40,30 +40,33 @@ class UsersController < ApplicationController
   end
 
   def delete
-    timenow = Time.zone.now()
-    timeMessage =params[:timestamp]
-
-    pubkey = User.find_by(loginName: params[:login]).pubkey_user
-    pb = OpenSSL::PKey::RSA.new(pubkey)
     begin
-      pb.public_decrypt(params[:sig_service])
-
+      pubkey = User.find_by(loginName: params[:login]).pubkey_user
+      pb = OpenSSL::PKey::RSA.new(pubkey)
+      sha_ds = pb.public_decrypt(params[:sig_service])
+      # sha Hash Wert (sha-256 über Identität und TS)
+      sha256 = Digest::SHA256.new
+      #Identität
+      ha256.update params[:login]
+      #TS
+      sha256.update params[:timestamp].to_i
+      puts sha256.hexdigestx
+      if sha256 != sha_ds
+        head 404
+      else
+        #Zeitstempel Prüfen
+        timenow = Time.zone.now().to_i
+        timeMessage =params[:timestamp].to_i
+        if (timenow-timeMessage)<=300
+              user = User.find_by(loginName: params[:login])
+              user.destroy
+        else
+          head 406
+        end
+      end
     rescue
       head 404
     end
-    if (timnow-timeMessage)<=300
-
-      user = User.find_by(loginName: params[:login])
-      user.destroy
-
-
-    end
-
-
   end
-
-
-
-
 end
 
